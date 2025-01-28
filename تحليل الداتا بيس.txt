@@ -1,0 +1,24 @@
+categories(id (pk),parent_id(FK),name,slug(UQ), ) // forign id in same table
+
+products(id (pk),name , slug(UQ) ,desc ,price , )
+
+stores(id(pk),name)
+cart // السلة ()
+
+orders (id,name,user_id,status)// عميات الشراء
+order_items(order_id (fk),product_id,qty)
+
+id , parent_id ,  name
+ 1 ,null ,  clothes
+ 2 ,1 ,  child
+
+العلاقة متعدد لمتعدد
+
+المنتج  تابع لاكثر من قسم
+والقسم فيه اكتر من منتج
+
+لذلك بكسر بجدول وسيط
+
+
+
+
