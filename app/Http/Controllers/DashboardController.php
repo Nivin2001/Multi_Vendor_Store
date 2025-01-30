@@ -18,31 +18,13 @@ class DashboardController extends Controller
 
     public function index()
     {
-        // method 1
-        // The action make return to response:view ,json, redirect,file
-        // return view('dashborad',[
-        //     'user' =>'Nivin Shabat',
-        // ]);
+        $user=Auth::user();
 
-        //method 2
-        // $user='Nivin Shabat';
-        // $title='store';
-        // var_dump(compact('user','title'));
-        // exit;
-        // return view('dashborad',compact('user','title'));
 
-        // method 3
-
-        // $title='store';
-        // $user=Auth::user();
-        // return Response::view('Layouts.dashboard',[ // return obj of response
-        //     'user' =>'nivin',
-        //     'title' => $title,
-        // ]);
-    //     $user='nivin shabat';
-    //     $title='store';
-    //     //return view , json;redirect,view,file
-    //     return view('Layouts.dashboard',compact('user','store'));
+        $user='nivin shabat';
+        $title='store';
+        //return view , json;redirect,view,file
+        return view('Layouts.dashboard',compact('user','title'));
     }
 }
 
